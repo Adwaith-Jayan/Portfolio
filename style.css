@@ -225,5 +225,49 @@ body{
 }
 
 
+.aoi{
+    margin-left: 120px ;
+    margin-top: 100px;
+    color: #b3b3b3;
+    font-family: "Outfit", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 25px;
+}
 
 
+.interests {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-left: 120px;
+}
+
+.interest-tag {
+  background-color: #1e1e1e;
+  border: 1px solid #00f0a0;
+  color: #ffffff;
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  cursor: default;
+  transition: background-color 0.3s ease;
+}
+
+.interest-tag:hover {
+  background-color: rgba(0, 255, 160, 0.4);
+  color: black;
+  box-shadow: 0 6px 20px rgba(0, 255, 160, 0.4);
+}
+
+
+.tech-stack{
+    margin-left: 120px ;
+    margin-top: 100px;
+    color: #b3b3b3;
+    font-family: "Outfit", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 25px;
+}
