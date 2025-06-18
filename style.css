@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Anton+SC&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,200;1,9..40,200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;400;700&display=swap');
 h1{
     font-family: 'Montserrat', sans-serif;
     /* font-family: "Anton SC", sans-serif; */
@@ -23,11 +24,10 @@ h1.eng-heading{
 
 .p-intro{
     margin-left: 15px;
-    font-family: "DM Sans", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 900;
+    font-family: "Outfit", sans-serif;
+    font-weight: 200;
     font-style: normal;
-    font-size: 15px;
+    font-size: 18px;
     color: white;
     margin-bottom: 0px;
 }
@@ -67,3 +67,163 @@ body{
 .navlist a:hover{
     text-decoration: underline;
 }
+
+
+
+.moreaboutme{
+    margin-left: 40px ;
+    margin-top: 100px;
+    color: #b3b3b3;
+    font-family: "Outfit", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+#about h1{
+    color: white;
+    margin-left: 40px;
+    font-family: "Outfit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 50px;
+}
+
+#about p{
+    color: white;
+    margin-top: 0;
+    margin-left: 40px;
+    font-family: "Outfit", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 20px;
+}
+
+.name-animate {
+  background: linear-gradient(270deg, #00f0ff, #ff00c8, #00f0ff);
+  background-size: 600% 600%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradientFlow 4s ease infinite;
+  font-weight: bold;
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.ed{
+    margin-left: 120px ;
+    margin-top: 100px;
+    color: #b3b3b3;
+    font-family: "Outfit", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 25px;
+}
+
+.ug {
+  background-color: #1e1e1e;
+  border: 1px solid #444;
+  border-radius: 12px;
+  margin: 0;
+  margin-left: 120px;
+  max-width: 700px;
+  box-shadow: 0 4px 12px rgba(0, 255, 160, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.ug:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 20px rgba(0, 255, 160, 0.4);
+}
+
+.ug h3, .ug h4, .ug h5 {
+  font-family: "DM Sans", sans-serif;
+  color: #ffffff;
+  margin-left: 40px;
+}
+
+.ug h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #00f0a0;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.ug h4 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #ccc;
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+.ug h5{
+    font-size: 16px;
+    font-weight: 400;
+    color: #ccc;
+    margin-top: 0px;
+}
+
+
+.twelveth, .tenth {
+  background-color: #1e1e1e;
+  border: 1px solid #444;
+  border-radius: 12px;
+  margin: 0;
+  margin-left: 120px;
+  max-width: 700px;
+  box-shadow: 0 4px 12px rgba(0, 255, 160, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 20px;
+}
+
+.twelveth:hover, .tenth:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 20px rgba(0, 255, 160, 0.4);
+}
+
+.twelveth h3, .twelveth h4, .twelveth h5,
+.tenth h3, .tenth h4, .tenth h5 {
+  font-family: "DM Sans", sans-serif;
+  color: #ffffff;
+  margin-left: 40px;
+}
+
+.twelveth h3, .tenth h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #00f0a0;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+.twelveth h4, .tenth h4 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #ccc;
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+.twelveth h5, .tenth h5 {
+  font-size: 16px;
+  font-weight: 400;
+  color: #ccc;
+  margin-top: 0px;
+}
+
+
+
+
