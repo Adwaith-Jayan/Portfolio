@@ -272,20 +272,20 @@ body{
     font-size: 25px;
 }
 
-.programming-languages{
+.programming-languages, .front-end, .back-end, .database, .tools{
   display: flex;
   flex-direction: row;
   gap: 30px;
   text-align: center;
 }
 
-.pl-heading, .languages{
+.pl-heading, .languages, .fe-heading, .be-heading, .db-heading, .tool-heading{
   color:  #DEDED3;
   font-family: "Outfit", sans-serif;
   font-style: normal;
 }
 
-.pl-heading{
+.pl-heading, .fe-heading, .be-heading, .db-heading, .tool-heading{
   margin-left: 120px;
   font-size: 24px;
   font-weight: bold;
@@ -325,8 +325,8 @@ body{
 
 
 .language-item img {
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
   object-fit: contain;
   margin-bottom: 10px;
 }
@@ -334,3 +334,43 @@ body{
 .jslogo{
   margin-left: 60px;
 }
+
+
+.fe-heading, .be-heading, .db-heading, .tool-heading{
+  margin-top: 80px;
+}
+
+.front-end .languages, .back-end .languages, .database .languages, .tools .languages{
+  margin-top: 80px;
+  margin-left: 170px;
+}
+
+.role1{
+    color: #ffffff;
+    font-family: "Outfit", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 25px;
+    margin-left: 40px;
+}
+
+
+
+.role1-box {
+  margin-left: 120px;
+  background-color: #1e1e1e;
+  border: 1px solid #444;
+  border-radius: 12px;
+  max-width: 700px;
+  width: 500px;
+  box-shadow: 0 4px 12px rgba(0, 255, 160, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.role1-box:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 20px rgba(0, 255, 160, 0.4);
+}
+
