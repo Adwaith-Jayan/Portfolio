@@ -271,3 +271,66 @@ body{
     font-style: normal;
     font-size: 25px;
 }
+
+.programming-languages{
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  text-align: center;
+}
+
+.pl-heading, .languages{
+  color:  #DEDED3;
+  font-family: "Outfit", sans-serif;
+  font-style: normal;
+}
+
+.pl-heading{
+  margin-left: 120px;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-top: 40px;
+}
+
+
+.languages {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  justify-items: center;
+  margin-left: 100px;
+}
+
+.language-item {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 1.2s ease; 
+  display: flex;
+}
+
+.language-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.language-item p{
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+
+.language-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.jslogo{
+  margin-left: 60px;
+}
