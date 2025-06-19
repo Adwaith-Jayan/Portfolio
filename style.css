@@ -374,3 +374,228 @@ body{
   box-shadow: 0 6px 20px rgba(0, 255, 160, 0.4);
 }
 
+.contact-form {
+  margin: 100px auto;
+  max-width: 600px;
+  background-color: #1e1e1e;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 255, 160, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+.contact-form:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 20px rgba(0, 255, 160, 0.4);
+}
+
+.contact-form label {
+  display: block;
+  font-family: "Outfit", sans-serif;
+  color: #DEDED3;
+  font-size: 16px;
+  margin-bottom: 6px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 90%;
+  padding: 12px;
+  border: 1px solid #444;
+  background-color: #2a2a2a;
+  color: white;
+  border-radius: 8px;
+  font-family: "DM Sans", sans-serif;
+  font-size: 14px;
+  margin-bottom: 20px;
+  margin-left: 15px;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border: 1px solid #00f0a0;
+  box-shadow: 0 0 8px rgba(0, 255, 160, 0.4);
+}
+
+.contact-form button {
+  background-color: #00f0a0;
+  color: black;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: "DM Sans", sans-serif;
+  font-size: 16px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #00c080;
+  box-shadow: 0 0 10px rgba(0, 255, 160, 0.5);
+}
+
+.form-heading {
+  text-align: center;
+  color: #00f0a0;
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+
+.socials{
+  margin-left: 120px;
+}
+
+
+.social-bullets {
+  list-style: none;
+  padding-left: 0;
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+  color: white;
+}
+
+.social-bullets li {
+  position: relative;
+  margin-bottom: 12px;
+  padding-left: 28px;
+}
+
+.social-bullets li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--bullet-color);
+}
+
+
+.social-bullets li:nth-child(1)::before {
+  background-color: #0077b5; /* LinkedIn Blue */
+}
+
+.social-bullets li:nth-child(2)::before {
+  background-color: #ffffff; /* GitHub White */
+}
+
+.social-bullets li:nth-child(3)::before {
+  background-color: #e1306c; /* Instagram Pink */
+}
+
+.social-bullets li:nth-child(4)::before {
+  background-color: #db4437; /* Gmail red */
+}
+
+.social-bullets a {
+  color: white;
+  text-decoration: none;
+}
+
+.social-bullets a:hover {
+  text-decoration: underline;
+}
+
+.social-heading{
+    color: #b3b3b3;
+    font-family: "Outfit", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 25px;
+}
+
+
+
+/* below are project tiles css */
+
+.project-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-left: 120px;
+  margin-top: 80px;
+}
+
+/* Tile Container */
+.project-tile {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 15px;
+  padding: 20px;
+  width: 700px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: box-shadow 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.project-tile:hover {
+  box-shadow: 0 6px 20px rgba(0, 255, 160, 0.4);
+}
+
+/* Project Content */
+.project-content {
+  flex: 1;
+}
+
+.project-name {
+  font-size: 26px;
+  font-weight: 600;
+  font-family: "Outfit", sans-serif;
+  color: white;
+  margin: 0;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.project-name::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(to right, #00f0a0, #00f0ff);
+  mix-blend-mode: lighten;
+  transition: width 1s ease-in-out;
+  z-index: 1;
+}
+
+.project-tile:hover .project-name::after {
+  width: 100%;
+}
+
+/* Main tools used */
+.project-tools {
+  font-size: 16px;
+  color: #ccc;
+  margin-top: 10px;
+}
+
+/* Open Icon */
+.open-icon {
+  font-size: 16px;
+  color: #00f0a0;
+  margin-left: 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: inline-block;
+}
+
+.project-tile:hover .open-icon {
+  opacity: 1;
+}
+

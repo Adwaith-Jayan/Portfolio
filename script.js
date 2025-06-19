@@ -17,3 +17,22 @@ const observer = new IntersectionObserver((entries) => {
 });
 
 items.forEach(item => observer.observe(item));
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const tiles = document.querySelectorAll(".project-tile");
+  const transition = document.getElementById("pageTransition");
+
+  tiles.forEach(tile => {
+    tile.addEventListener("click", (e) => {
+      e.preventDefault();
+      const link = tile.getAttribute("data-link");
+      transition.classList.add("active");
+
+      setTimeout(() => {
+        window.location.href = link;
+      }, 700);
+    });
+  });
+});
+

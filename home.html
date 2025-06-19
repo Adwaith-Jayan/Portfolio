@@ -4,14 +4,32 @@
         <title> Adwaith Jayan</title>
         <link rel="icon" href="ajlogo.ico" type="image/x-icon" />
         <link rel="stylesheet" href="style.css" />
+
+        <!-- for page loading animation -->
+         <style>
+            .page-transition {
+            position: fixed;
+            bottom: -100%;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            z-index: 1000;
+            transition: bottom 0.6s ease-in-out;
+            }
+
+            .page-transition.active {
+            bottom: 0;
+            }
+        </style>
     </head>
     <body>
         <nav class="navbar">
             <ul class="navlist">
                 <li><a href="#home">Home </a></li>
-                <li><a href="#projects">  Projects </a> </li>
                 <li> <a href="#about">  About </a> </li>
-                <li>Connect</li>
+                <li><a href="#projects">  Projects </a> </li>
+                <li> <a href="#contact">Connect </a> </li>
             </ul>
         </nav>
         <!-- Home Section -->
@@ -22,11 +40,15 @@
                 Hello! I'm Adwaith, an aspiring software engineer currently pursuing a degree in Computer Science and Engineering. </p>
             <p class="p-intro"> I'm passionate about Full Stack Development and am constantly exploring new technologies to enhance my skills. </p>
             <p class="p-intro"> Learn more about my journey and projects in this space. </p>
-        </section>
-
-        <!--  Projects Sections -->
-        <section id="projects">
-
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
         </section>
 
         <!-- About section -->
@@ -184,6 +206,56 @@
                 </div>            
             </div>
         </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h3 class="moreaboutme"> PROJECTS</h3>
+            <div class="project-list">
+                <div class="project-tile" data-link="projects/project1.html">
+                    <div class="project-content">
+                        <h3 class="project-name">Department Stock Management System</h3>
+                        <p class="project-tools">React  • Node.js   • MongoDB</p>
+                        <span class="open-icon">🔗Discover the Project</span>
+                    </div>
+                </div>
+                <div class="project-tile" data-link="projects/project1.html">
+                    <div class="project-content">
+                        <h3 class="project-name">Cab Booking System</h3>
+                        <p class="project-tools">HTML  • CSS   • Flask</p>
+                        <span class="open-icon">🔗Discover the Project</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+         <section id="contact">
+            <h3 class="moreaboutme"> CONNECT</h3>
+            <div class="socials">
+                <h4 class="social-heading">SOCIALS</h4>
+                <ul class="social-bullets">
+                    <li> <a href="https://www.linkedin.com/in/adwaithjayan/" target="_blank">Linkedin</a></li>
+                    <li> <a href="https://github.com/Adwaith-Jayan" target="_blank">Github</a></li>
+                    <li> <a href="http://instagram.com/adwaith_jayan_/" target="_blank">Instagram</a></li>
+                    <li> <a href="mailto:adwaithjayan1234@gmail.com?subject=Let's Connect&body=Hi Adwaith,%0D%0A%0D%0AI came across your portfolio and..." target="_blank">Email</a></li>
+                </ul>
+            </div>
+            <div class="contact-form">
+                <h3 class="form-heading"> CONTACT ME</h3>
+                <form action="https://formspree.io/f/xgvyzjbp" method="POST">
+                <label for="email">Your Email:</label><br>
+                <input type="email" name="email" id="email" required>
+
+                <label for="message">Your Message:</label><br>
+                <textarea name="message" id="message" rows="5" required></textarea>
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="http://127.0.0.1:5500/home.html">
+                <button type="submit">Send</button>
+                </form>
+            </div>
+
+         </section>
+         <div class="page-transition" id="pageTransition"></div>
         <script src="script.js"></script>
     </body>
 </html>
