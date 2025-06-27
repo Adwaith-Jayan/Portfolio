@@ -5,11 +5,11 @@
 h1{
     font-family: 'Montserrat', sans-serif;
     /* font-family: "Anton SC", sans-serif; */
-    font-size: 50px;
+    font-size: 65px;
 }
 
 h1.cs-heading{
-    margin-left: 15px ;
+    margin-left: 120px ;
     margin-top: 100px;
     margin-bottom: 0;
     color: #00F050;
@@ -17,13 +17,13 @@ h1.cs-heading{
 
 h1.eng-heading{
     margin-top: 0;
-    margin-left: 30px;
+    margin-left: 150px;
     color: #DEDED3;
     margin-bottom: 2px;
 }
 
 .p-intro{
-    margin-left: 15px;
+    margin-left: 120px;
     font-family: "Outfit", sans-serif;
     font-weight: 200;
     font-style: normal;
@@ -34,16 +34,21 @@ h1.eng-heading{
 
 body{
     background-color: black;
+    overflow-x: hidden;
 }
 
 .navbar{
-    background-color: #595559;
+    background-image: url('/images/AlbedoBase_XL_A_minimalistic_highresolution_night_sky_backgrou_2.jpg'), url('/images/moonnav.jpg');
+    background-size: contain;
+    background-position: right, left;
+    background-repeat: no-repeat, repeat;
+    /* background-color: #595559; */
     color: #DEDED3;
     font-family: "DM Sans", sans-serif;
-    width: 600px;
+    width: 400px;
     margin: 0 auto;
     padding: 10px;
-    border-radius: 5px;
+    border-radius: 15px;
     margin-top: 20px;
 }
 
@@ -77,11 +82,13 @@ body{
     font-family: "Outfit", sans-serif;
     font-weight: 100;
     font-style: normal;
+    border-left: 4px solid #00f0a0;
+    padding-left: 12px;
 }
 
 #about h1{
     color: white;
-    margin-left: 40px;
+    margin-left: 120px;
     font-family: "Outfit", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -91,7 +98,7 @@ body{
 #about p{
     color: white;
     margin-top: 0;
-    margin-left: 40px;
+    margin-left: 120px;
     font-family: "Outfit", sans-serif;
     font-weight: 100;
     font-style: normal;
@@ -597,5 +604,125 @@ body{
 
 .project-tile:hover .open-icon {
   opacity: 1;
+}
+
+.site-footer {
+  background-color: #0a0a0a;
+  padding: 40px 20px;
+  text-align: center;
+  color: #888;
+  font-family: 'Outfit', sans-serif;
+  border-top: 1px solid #222;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer-name {
+  font-size: 18px;
+  color: #ccc;
+  margin-bottom: 12px;
+}
+
+.footer-name strong {
+  color: #00ffaa;
+}
+
+.footer-socials {
+  margin: 16px 0;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.footer-socials a svg {
+  width: 26px;
+  height: 26px;
+  /* fill: #00ffaa; */
+  transition: transform 0.3s ease, fill 0.3s ease;
+}
+
+.footer-socials a:hover svg {
+  transform: scale(1.2);
+  fill: #00f0a0;
+}
+
+.footer-note {
+  font-size: 14px;
+  color: #666;
+  margin-top: 10px;
+}
+
+
+
+
+.scroll-fade {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.scroll-fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* caraousel */
+
+.about-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+
+/* Right side - Carousel */
+.swiper-container {
+  flex: 1;
+  width: 300px; /* Wider so that left/right slides can peek */
+  height: 250px;
+  border-radius: 15px;
+  overflow: visible; /* Needed to allow side slides to show */
+  margin-top: 150px;
+  margin-left: 120px;
+  margin-right: 0px;
+  position: relative;
+}
+
+.swiper-wrapper {
+  align-items: center;
+}
+
+.swiper-slide {
+  width: 150px !important; /* fixed width */
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+.bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Send behind everything */
 }
 

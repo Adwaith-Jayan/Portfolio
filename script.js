@@ -36,3 +36,42 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
+
+const fadeElements = document.querySelectorAll('.scroll-fade');
+
+const observer1 = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    } else {
+      entry.target.classList.remove('visible');
+    }
+  });
+}, {
+  threshold: 0.2,
+});
+
+fadeElements.forEach(el => observer1.observe(el));
+
+
+
+
+const swiper = new Swiper(".mySwiper", {
+  effect: "coverflow",
+  grabCursor: true,
+  centeredSlides: true,
+  loop: true,
+  slidesPerView: 3, // important for fixed slide width
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
+  },
+  coverflowEffect: {
+    rotate: 30,
+    stretch: -10,     // slightly overlap slides
+    depth: 100,
+    modifier: 1,
+    slideShadows: true,
+  },
+});
+
