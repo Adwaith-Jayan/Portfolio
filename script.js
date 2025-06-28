@@ -91,17 +91,4 @@ const swiper = new Swiper('.mySwiper', {
 });
 
 
-function handleBack() {
-  const transition = document.getElementById("pageTransition");
-  transition.classList.remove("hide");
-
-  setTimeout(() => {
-    if (history.length > 1) {
-      history.back();
-    } else {
-      window.location.href = "#projects"; // or your homepage path
-    }
-  }, 500);
-}
-
 

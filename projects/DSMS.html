@@ -238,10 +238,15 @@
     });
 
     function handleBack() {
-      const transition = document.getElementById("pageTransition");
-      transition.classList.remove("hide");
-      setTimeout(() => history.back(), 500);
-    }
+    const transition = document.getElementById("pageTransition");
+    transition.classList.remove("hide");
+
+    setTimeout(() => {
+      window.location.href = "/index.html#projects";
+    }, 500);
+}
+
+
 
     const fullScreenImages = document.querySelectorAll('.fullscreen-image');
 
