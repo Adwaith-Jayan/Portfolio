@@ -765,6 +765,16 @@ body{
 /* for mobiles */
 
 @media only screen and (max-width: 768px) {
+
+  .about-container {
+    flex-wrap: nowrap !important; /* Prevent wrapping */
+  }
+
+  .swiper-container {
+    flex-shrink: 0;
+    width: 150px; /* Same as desktop */
+    height: 250px;
+  }
   html, body {
     width: 1000px; /* Or match your desktop width */
     overflow-x: auto;
