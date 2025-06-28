@@ -766,17 +766,22 @@ body{
 
 @media only screen and (max-width: 768px) {
 
-  .about-container {
-    flex-wrap: nowrap !important; /* Prevent wrapping */
+  .about-container{
+    display: flex;
+    flex-direction: column;
   }
-
+ 
   .swiper-container {
-    flex-shrink: 0;
-    width: 150px; /* Same as desktop */
+    width: 150px;
     height: 250px;
-  }
+    padding: 50px 0; 
+    margin-top: 1000px;
+    margin-right: 300px;
+    margin-left: 150px;
+}
+
   html, body {
-    width: 1000px; /* Or match your desktop width */
+    min-width: 1000px; /* Or match your desktop width */
     overflow-x: auto;
   }
   h1 {
@@ -798,22 +803,20 @@ body{
   .role1-box,
   .socials,
   .project-list {
-    margin-left: 20px !important;
-    margin-right: 20px !important;
+    margin-left: 20px ;
+    margin-right: 20px ;
   }
 
   .navbar {
     width: 95%;
     padding: 10px;
     margin: 10px auto;
-    flex-direction: column;
     text-align: center;
     background-position: center;
     background-size: cover;
   }
 
   .navlist {
-    flex-direction: column;
     gap: 8px;
   }
 
@@ -877,7 +880,7 @@ body{
 
   .contact-form input,
   .contact-form textarea {
-    width: 100%;
+    width: 90%;
     margin-left: 0;
   }
 
