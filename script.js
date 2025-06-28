@@ -99,7 +99,7 @@ function handleBack() {
     if (history.length > 1) {
       history.back();
     } else {
-      window.location.href = "/"; // or your homepage path
+      window.location.href = "#projects"; // or your homepage path
     }
   }, 500);
 }
