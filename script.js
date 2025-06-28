@@ -56,22 +56,38 @@ fadeElements.forEach(el => observer1.observe(el));
 
 
 
-const swiper = new Swiper(".mySwiper", {
-  effect: "coverflow",
-  grabCursor: true,
-  centeredSlides: true,
-  loop: true,
-  slidesPerView: 3, // important for fixed slide width
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
-  coverflowEffect: {
-    rotate: 30,
-    stretch: -10,     // slightly overlap slides
-    depth: 100,
-    modifier: 1,
-    slideShadows: true,
-  },
+const swiper = new Swiper('.mySwiper', {
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    loop: true,
+    slidesPerView: 'auto', // Allows slides to have different widths
+    coverflowEffect: {
+        rotate: 0, // No rotation
+        stretch: 0, // No stretching
+        depth: 100, // Depth between slides
+        modifier: 2, // Effect multiplier
+        slideShadows: true, // Enable shadows
+    },
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+    breakpoints: {
+        // Adjust settings for different screen sizes
+        640: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+        },
+        768: {
+            slidesPerView: 'auto',
+            spaceBetween: 40,
+        },
+        1024: {
+            slidesPerView: 'auto',
+            spaceBetween: 50,
+        },
+    }
 });
+
 
