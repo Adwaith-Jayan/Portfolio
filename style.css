@@ -761,3 +761,132 @@ body{
   z-index: -1;
 }
 
+
+/* for mobiles */
+
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 36px;
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  h1.cs-heading,
+  h1.eng-heading,
+  .p-intro,
+  .moreaboutme,
+  #about h1,
+  #about p,
+  .ed,
+  .aoi,
+  .tech-stack,
+  .role1,
+  .role1-box,
+  .socials,
+  .project-list {
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+  }
+
+  .navbar {
+    width: 95%;
+    padding: 10px;
+    margin: 10px auto;
+    flex-direction: column;
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+  }
+
+  .navlist {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .navlist a {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .interests {
+    margin-left: 20px;
+    margin-right: 20px;
+    gap: 8px;
+  }
+
+  .languages,
+  .front-end .languages,
+  .back-end .languages,
+  .database .languages,
+  .tools .languages {
+    margin: 0 auto;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .language-item img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .project-tile {
+    width: 90%;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 20px;
+  }
+
+  .project-name {
+    font-size: 20px;
+  }
+
+  .project-tools {
+    font-size: 14px;
+  }
+
+  .swiper-container {
+    width: 100%;
+    height: 180px;
+    margin: 40px auto;
+  }
+
+  .swiper-slide {
+    width: 100px !important;
+    height: 100%;
+  }
+
+  .contact-form {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .form-heading {
+    font-size: 22px;
+  }
+
+  .social-heading {
+    font-size: 22px;
+    margin-top: 40px;
+  }
+
+  .footer-name {
+    font-size: 16px;
+  }
+
+  .footer-socials a svg {
+    width: 22px;
+    height: 22px;
+  }
+
+  .footer-note {
+    font-size: 12px;
+  }
+}
+
