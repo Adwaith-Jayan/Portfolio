@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Realtime Chat App | Adwaith Jayan</title>
+  <link rel="stylesheet" href="../style.css" />
+  <style>
+    /* Base Layout Styles */
+    body {
+      margin: 0;
+      font-family: 'Outfit', sans-serif;
+      background-color: #0d0d0d;
+      color: #ffffff;
+    }
+
+    .page-transition {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      z-index: 1000;
+      transition: bottom 0.6s ease-in-out;
+    }
+
+    .page-transition.hide {
+      bottom: -100%;
+    }
+
+    .project-page {
+      padding: 40px 120px;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .project-page.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .back-button {
+      background-color: #00f0a0;
+      border: none;
+      color: black;
+      padding: 10px 20px;
+      font-weight: bold;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-bottom: 30px;
+      transition: background 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #00ffaa;
+    }
+
+    h1.project-title {
+      font-size: 48px;
+      margin-bottom: 20px;
+      background: linear-gradient(90deg, #00f0a0, #00ffaa);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 0 0 20px rgba(0, 255, 160, 0.3);
+    }
+
+    p.project-description, li {
+      font-size: 18px;
+      line-height: 1.7;
+      color: #ccc;
+    }
+
+    .section-heading {
+      font-size: 28px;
+      color: #00f0a0;
+      margin: 50px 0 20px 0;
+    }
+
+    .fullscreen-scroll-container {
+      height: 100vh;
+      overflow-y: scroll;
+      scroll-snap-type: y mandatory;
+    }
+
+    .fullscreen-image {
+      height: 100vh;
+      scroll-snap-align: start;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: black;
+    }
+
+    .fullscreen-image img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 16px;
+      box-shadow: 0 0 40px rgba(0, 255, 160, 0.4);
+      opacity: 0;
+      transform: scale(0.95);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .fullscreen-image.visible img {
+      opacity: 1;
+      transform: scale(1);
+    }
+  </style>
+</head>
+<body>
+  <div class="page-transition" id="pageTransition"></div>
+
+  <div class="project-page" id="projectPage">
+    <button class="back-button" onclick="handleBack()">&larr; Back</button>
+
+    <h1 class="project-title">Realtime Chat App</h1>
+    <p class="project-description"><strong>Type:</strong> Personal Project</p>
+
+    <p class="project-description">
+      A full-stack real-time chat application that allows users to send messages to each other instantly. This project supports one-on-one chats, persistent message history, and a sleek WhatsApp-inspired interface. Users can login, view previous conversations, and initiate new chats by username. WebSockets are used for real-time communication.
+    </p>
+
+    <p class="project-description"><strong>Features:</strong></p>
+    <ul>
+      <li>Login and Register system with session storage</li>
+      <li>View chat history with multiple users</li>
+      <li>Start new chat by entering username</li>
+      <li>Realtime messaging using Socket.IO</li>
+      <li>Responsive design with clean UI similar to WhatsApp</li>
+    </ul>
+
+    <p class="project-description"><strong>Tech Stack:</strong></p>
+    <ul>
+      <li><strong>Frontend:</strong> React, CSS Modules</li>
+      <li><strong>Backend:</strong> Node.js, Express.js</li>
+      <li><strong>Database:</strong> MongoDB (Mongoose)</li>
+      <li><strong>Realtime:</strong> Socket.IO</li>
+    </ul>
+  </div>
+
+  <div class="fullscreen-scroll-container">
+    <div class="fullscreen-image"><img src="./ChatImages/home.png" alt="Home Dashboard" /></div>
+    <div class="fullscreen-image"><img src="./ChatImages/login.png" alt="Login" /></div>
+    <div class="fullscreen-image"><img src="./ChatImages/register.png" alt="Register" /></div>
+    <div class="fullscreen-image"><img src="./ChatImages/chat1.png" alt="Chat Interface 1" /></div>
+    <div class="fullscreen-image"><img src="./ChatImages/chat2.png" alt="Chat Interface 2" /></div>
+  </div>
+
+  <script>
+    window.addEventListener("load", () => {
+      const transition = document.getElementById("pageTransition");
+      const content = document.getElementById("projectPage");
+
+      transition?.classList.add("hide");
+      setTimeout(() => content?.classList.add("visible"), 300);
+    });
+
+    function handleBack() {
+      const transition = document.getElementById("pageTransition");
+      transition.classList.remove("hide");
+      setTimeout(() => {
+        window.location.href = "/index.html#projects";
+      }, 500);
+    }
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.7 });
+
+    document.querySelectorAll('.fullscreen-image').forEach(img => {
+      observer.observe(img);
+    });
+  </script>
+</body>
+</html>
